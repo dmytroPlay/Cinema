@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%block title%}Додати фільм{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="form-hold">
+        <form method="POST" class="form">
+            <input class="input" name="title" placeholder="Назва фільму" required>
+            <input class="input" name="genre" placeholder="Жанр">
+            <input class="input" name="duration" placeholder="Тривалість у хвилинах">
+            <input class="input" name="description" placeholder="Опис фільму">
+            <input class="input" name="price" placeholder="Ціна квитка" required>
+            <input class="input" name="image" placeholder="Шлях або URL зображення" required>
+            <button type="submit" class="input">Додати фільм</button>
+        </form>
+    </div>
+</div>
+{%endblock%}

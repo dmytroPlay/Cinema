@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{% block title %}Галерея{% endblock %}
+{%block content%}
+<div class="container">
+    <div class="grid">
+        <a href=""><img src="{{ url_for('static', filename = 'images/images (1).jpg')}}" class="imgg">
+        </a>
+        <a href=""><img src="{{ url_for('static', filename = 'images/images (2).jpg')}}" alt="" class="imgg">
+        </a>
+        <a href=""><img src="{{ url_for('static', filename = 'images/images (3).jpg')}}" alt="" class="imgg">
+        </a>
+        <a href=""><img src="{{ url_for('static', filename = 'images/images (4).jpg')}}" alt="" class="imgg">
+        </a>
+        <a href=""><img src="{{ url_for('static', filename = 'images/images (5).jpg')}}" alt="" class="imgg">
+        </a>
+        <a href=""><img src="{{ url_for('static', filename = 'images/images.jpg')}}" alt="" class="imgg">
+        </a>
+    </div>
+</div>
+{%endblock%}

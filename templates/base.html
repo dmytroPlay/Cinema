@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Cinema{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="holder">
+                    <li class="items">
+                        <a href="{{ url_for('main') }}" class="liH">Головна</a>
+                    </li>
+                    
+                    <li class="items">
+                        <a href="{{ url_for('about') }}" class="liH">Про нас</a>
+                    </li>
+
+                    <li class="items">
+                        <a href="{{ url_for('movies') }}" class="liH">Фільми</a>
+                    </li>
+
+                    <li class="items">
+                        <a href="{{ url_for('add_movie') }}" class="liH">Додати фільм</a>
+                    </li>
+
+                    <li class="items">
+                        <a href="{{ url_for('gallery') }}" class="liH">Галерея</a>
+                    </li>
+
+                    <li class="items">
+                        <a href="{{ url_for('contacts') }}" class="liH">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

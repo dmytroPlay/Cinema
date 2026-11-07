@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block title %}Фільми{% endblock %}
+{% block content%}
+{%for movie in movies%}
+<div class="container">
+    <div class="holders">
+        <div class="movie">
+            <h2 class="first">{{movie['title']}}</h2>
+            <p class="second">{{movie['genre']}}</p>
+            <p class="second">{{movie['duration']}}</p>
+            <p class="second">{{movie['description']}}</p>
+            <p class="second">{{movie['price']}}</p>
+            <p class="second">{{movie['image']}}</p>
+            <form action="/delete/{{movie.id}}" method="POST" onsubmit="return confirm('Видалити?')">
+                <button type="submit" class="btn">Видалити</button>
+            </form>
+        </div>
+    </div>
+</div>
+{%endfor%}
+{%endblock%}
